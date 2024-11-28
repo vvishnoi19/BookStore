@@ -15,12 +15,16 @@ const uploader=multer({
 router.post('/add/book',uploader.single('file'),(req,res)=>{
     bookcontroller.addBook(req,res);
 });
+
 router.get('/books',(req,res)=>{
     bookcontroller.getBooks(req,res);
 });
 router.get('/book/:id',(req,res)=>{
     bookcontroller.getBook(req,res);
 });
+router.get('/view/book/:id',(req,res)=>{
+    bookcontroller.viewBook(req,res);
+})
 router.put('/edit/book/:id',(req,res)=>{
     bookcontroller.editBook(req,res);
 });

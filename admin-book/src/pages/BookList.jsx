@@ -69,9 +69,10 @@ function BookList() {
   {
     navigate('/view/book/'+id)
   }
+
   return (
     <Container>
-      <Form.Group className="mb-3">
+      <Form.Group className="mb-3 search" >
         <Form.Control
           type="text"
           placeholder="Enter Book Name"
